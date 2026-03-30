@@ -1,0 +1,56 @@
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..9ecfdefb71e923fc879505e0d1ed2683569a12f5
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1,50 @@
++# Russian Villagers (Fabric)
++
++Мод для Minecraft Fabric 1.20.1: жители при клике по ним отвечают игроку случайной фразой на русском языке в чат.
++
++## Что делает мод
++- Работает на сервере и в одиночной игре.
++- При взаимодействии (ПКМ) с жителем показывает одну из русских фраз.
++- Не ломает ванильную торговлю: интерфейс торговли открывается как обычно.
++
++## Установка
++1. Установите **Fabric Loader** для Minecraft 1.20.1.
++2. Установите **Fabric API**.
++3. Соберите мод `./gradlew build`.
++4. Файл JAR из `build/libs` положите в папку `mods`.
++
++## Настройка фраз
++Русские фразы находятся в файле:
++`src/main/java/ru/villagers/russianvillagers/RussianVillagersMod.java`
++
++Измените список `PHRASES`, добавив свои строки.
++
++## Лицензия
++MIT
++
++## Bedrock (.mcpack)
++В репозиторий добавлен файл `russian-villagers.mcpack` — заготовка behavior pack для Minecraft Bedrock.
++
++Как использовать:
++1. Дважды кликните по `russian-villagers.mcpack`.
++2. Импортируйте набор в Minecraft Bedrock.
++3. Подключите набор к миру в разделе Behavior Packs.
++
++Примечание: Bedrock не даёт простого API, полностью аналогичного Fabric-событию клика по жителю, поэтому в паке добавлены русские фразы и пример функции `functions/villager_phrases.mcfunction`.
++
++
++### Где лежат файлы
++Оба архива находятся **в корне репозитория**:
++- `./russian-villagers.mcpack`
++- `./russian-villagers-bedrock.mcpack`
++
++Проверка в терминале:
++```bash
++ls -lh *.mcpack
++```
++
++
++### Дополнительная папка release/
++Для удобства эти же файлы продублированы в папке `release/`:
++- `release/russian-villagers.mcpack`
++- `release/russian-villagers-bedrock.mcpack`
